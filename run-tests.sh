@@ -49,6 +49,7 @@ export PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python:$LIBS:.
 
 export PYTHONPATH=$PYTHONPATH:joblibspark
 
+echo "PYTHONPATH: ${PYTHONPATH}"
 
 # Run test suites
 
