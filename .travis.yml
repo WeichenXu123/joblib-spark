@@ -31,7 +31,6 @@ install:
     fi
 
 script:
-  -
   - SPARK_HOME=$HOME/.cache/spark-versions/$SPARK_BUILD ./run-tests.sh
 
 after_success:
