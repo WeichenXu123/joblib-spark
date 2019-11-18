@@ -47,6 +47,8 @@ export PYSPARK_SUBMIT_ARGS="--driver-memory 2g --executor-memory 2g pyspark-shel
 
 export PYTHONPATH=$PYTHONPATH:$LIBS:.
 
+export PYTHONPATH=$PYTHONPATH:joblibspark
+
 
 # Run test suites
 
