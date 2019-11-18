@@ -31,7 +31,8 @@ install:
     fi
 
 script:
-  - SPARK_HOME=$HOME/.cache/spark-versions/$SPARK_BUILD ./python/run-tests.sh
+  -
+  - SPARK_HOME=$HOME/.cache/spark-versions/$SPARK_BUILD ./run-tests.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
