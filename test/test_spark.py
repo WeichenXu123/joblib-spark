@@ -17,6 +17,7 @@
 from time import sleep
 import pytest
 from distutils.version import LooseVersion
+import sklearn
 
 if LooseVersion(sklearn.__version__) < LooseVersion('0.21'):
     from sklearn.externals.joblib.parallel \
