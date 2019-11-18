@@ -45,7 +45,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 export PYSPARK_SUBMIT_ARGS="--driver-memory 2g --executor-memory 2g pyspark-shell "
 
-export PYTHONPATH=$PYTHONPATH:$LIBS:.
+export PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python:$LIBS:.
 
 export PYTHONPATH=$PYTHONPATH:joblibspark
 
