@@ -52,7 +52,7 @@ export PYTHONPATH=$PYTHONPATH:joblibspark
 echo "PYTHONPATH: ${PYTHONPATH}"
 
 # Run test suites
-
+echo "PYSPARK_PIN_THREAD: ${PYSPARK_PIN_THREAD}"
 if [[ "$python_major" == "2" ]]; then
   echo $PYSPARK_DRIVER_PYTHON `which nosetests` -v --all-modules -w $DIR 2>&1 | grep -vE "INFO (ParquetOutputFormat|SparkContext|ContextCleaner|ShuffleBlockFetcherIterator|MapOutputTrackerMaster|TaskSetManager|Executor|MemoryStore|CacheManager|BlockManager|DAGScheduler|PythonRDD|TaskSchedulerImpl|ZippedPartitionsRDD2)";
 
