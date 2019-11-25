@@ -22,8 +22,9 @@ before_install:
   - ./bin/download_travis_dependencies.sh
 
 install:
-  - python3.7 -m pip install --user joblib==0.14.0 scikit-learn==${SKLEARN_VERSION} nose==1.3.3 pytest;
+  - pyenv install -f 3.7.5 && pyenv global 3.7.5;
+    python3 -m pip install --user joblib==0.14.0 scikit-learn==${SKLEARN_VERSION} nose==1.3.3 pytest;
 
 script:
-  - PYSPARK_PYTHON=python3.7 SPARK_HOME=$HOME/.cache/spark-versions/spark-${SPARK_VERSION}-bin-hadoop2.7 ./run-tests.sh
+  - PYSPARK_PYTHON=python3 SPARK_HOME=$HOME/.cache/spark-versions/spark-${SPARK_VERSION}-bin-hadoop2.7 ./run-tests.sh
 
